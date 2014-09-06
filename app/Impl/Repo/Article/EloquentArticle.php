@@ -15,7 +15,7 @@ class EloquentArticle implements ArticleInterface{
 	}
 
 
-	public function byPage($page=1, $limit=10){
+	public function byPage($page=1, $limit=2){
 
 		$result = new \StdClass;		//sample class
 
@@ -48,7 +48,7 @@ class EloquentArticle implements ArticleInterface{
 
 	}
 
-	public function byTag($tag, $page=1, $limit=10){
+	public function byTag($tag, $page=1, $limit=2){
 
  		$foundTag = $this->tag->where('slug', $tag)->first();
 

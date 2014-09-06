@@ -15,7 +15,7 @@ class ContentController extends BaseController {
 	public function home()
 	{
 		$page = Input::get('page', 1);
-		$perPage = 10;
+		$perPage = 2;
 
 		// Get 10 latest articles with pagination
 		// Still get "arrayable" collection of articles
