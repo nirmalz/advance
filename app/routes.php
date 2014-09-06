@@ -16,3 +16,10 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+Route::get('articles', 'ContentController@home');
+
+Route::get('article/{slug}', array(
+	'uses' 	=> 'ContentController@article',
+	'as'	=> 'view'
+	));
+
