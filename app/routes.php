@@ -23,3 +23,10 @@ Route::get('article/{slug}', array(
 	'as'	=> 'view'
 	));
 
+Route::get('register', 'ArticleController@create');
+
+Route::post('register', array(
+	'uses'	=> 'ArticleController@store',
+	'as'	=> 'store'
+	));
+
